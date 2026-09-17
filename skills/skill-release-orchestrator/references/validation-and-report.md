@@ -16,13 +16,13 @@ Use esta referência antes de declarar o pacote pronto ou publicado.
 - O entrypoint referencia apenas arquivos existentes e mantém progressive disclosure.
 - `agents/openai.yaml` tem strings válidas, prompt com `$skill-name` e política coerente.
 - `.claude-plugin/plugin.json` e agentes Claude estão presentes e válidos quando Claude Code está no escopo.
-- README, CONTRIBUTING, LICENSE, assets e scripts estão presentes conforme as decisões do intake.
+- README, CONTRIBUTING, LICENSE e scripts estão presentes; `assets/` só existe quando aprovado no intake.
 
 ### Conteúdo e distribuição
 
 - README bilíngue, quando solicitado, tem instruções equivalentes para Codex e Claude Code.
 - Badges mostram apenas versão, licença, plataformas e fatos reais.
-- Banner está no repositório, tem alt text e não contém texto ilegível, logos indevidos ou dados privados.
+- O banner ASCII está no README e é legível em tema claro e escuro; se houver asset visual adicional, ele tem alt text e não contém texto ilegível, logos indevidos ou dados privados.
 - Exemplos usam placeholders seguros e não expõem credenciais, PII, URLs internas ou código privado.
 - Visibilidade privada não é descrita como instalação pública e uma licença ausente/proprietária não é apresentada como permissiva.
 

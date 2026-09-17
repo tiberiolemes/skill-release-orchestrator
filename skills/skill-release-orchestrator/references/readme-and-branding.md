@@ -6,7 +6,7 @@ Use esta referência quando o intake pedir um pacote com aparência pronta para 
 
 O README deve conter, nessa ordem ou em ordem equivalente:
 
-1. Nome e banner com texto alternativo.
+1. Nome e banner ASCII ou asset visual explicitamente aprovado, com descrição acessível quando aplicável.
 2. Badges coerentes com versão, licença, plataformas e, se aplicável, build.
 3. Resumo do que a Skill faz e do que não faz.
 4. Lista de capacidades e estrutura do pacote.
@@ -23,7 +23,7 @@ Para README PT-BR/English, mantenha a mesma promessa, nomes técnicos, comandos 
 Use imagens de badge somente para fatos reais e verificáveis. Exemplos adequados:
 
 ~~~markdown
-[![Version](https://img.shields.io/badge/version-1.0.0-7c3aed?style=for-the-badge)](...)
+[![Version](https://img.shields.io/badge/version-1.0.1-7c3aed?style=for-the-badge)](...)
 [![License](https://img.shields.io/badge/license-MIT-16a34a?style=for-the-badge)](LICENSE)
 ![Codex supported](https://img.shields.io/badge/Codex-supported-111827?style=for-the-badge)
 ![Claude Code supported](https://img.shields.io/badge/Claude%20Code-supported-111827?style=for-the-badge)
@@ -33,16 +33,17 @@ Para repositório privado, não crie badge ou link que sugira instalação públ
 
 ## Banner
 
-Se aprovado, use um banner panorâmico, legível em miniatura e com espaço negativo para o título do README. Prefira uma ilustração sem texto embutido quando a renderização exata de palavras for importante; mantenha o texto no README e forneça alt text descritivo. Use o gerador de imagem disponível para uma arte nova e salve o asset dentro de `assets/` antes de referenciá-lo.
+ASCII é a opção padrão deste pacote: mantenha o banner no próprio README, em um bloco `<pre>` ou de texto monoespaçado. Ele deve comunicar o nome da Skill e, quando couber, seu fluxo ou as plataformas suportadas sem depender de imagem, arquivo binário ou carregamento externo.
 
-Checklist visual:
+Checklist do banner ASCII:
 
-- proporção panorâmica e tamanho adequado para GitHub;
-- contraste suficiente e sem dependência de cor para entender o projeto;
-- sem logos não autorizados, watermark, secrets ou dados reais;
-- paleta compatível com o nome e a finalidade da Skill;
-- referência no README com caminho relativo e alt text;
-- `file`, preview visual e diff binário conferidos.
+- largura moderada, idealmente entre 60 e 80 colunas, para funcionar em terminal e GitHub;
+- contraste e leitura preservados em temas claro e escuro;
+- caracteres consistentes e fáceis de copiar; teste setas, acentos e caracteres de caixa no ambiente-alvo;
+- sem secrets, PII, URLs internas, logos não autorizados ou texto que fique ilegível em fonte monoespaçada;
+- descrição curta antes ou depois do bloco se o desenho não for autoexplicativo.
+
+Só use uma imagem quando o intake aprovar explicitamente esse formato. Nesse caso, salve o asset em `assets/`, forneça alt text, verifique o preview visual e confirme que a imagem não expõe dados privados.
 
 ## Licença
 

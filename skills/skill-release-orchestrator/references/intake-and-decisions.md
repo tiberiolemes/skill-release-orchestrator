@@ -28,7 +28,7 @@ Se a resposta for “não sei” para visibilidade, licença, destino ou autoriz
 ## Perguntas de conteúdo e marca
 
 - Quais idiomas serão suportados? O README deve ser PT-BR/English ou outra combinação?
-- O banner terá texto exato ou somente uma ilustração? Qual formato, proporção, paleta e mensagem visual?
+- O banner será ASCII (padrão), imagem ou nenhum? Se for imagem, qual formato, proporção, paleta e mensagem visual? Se for ASCII, há limite de largura ou caracteres a evitar?
 - Quais badges são obrigatórios: versão, licença, plataforma, estágio, build, cobertura ou outros?
 - Existe logo, paleta, tipografia, asset de referência ou restrição de uso?
 - O repositório pode conter screenshots, exemplos fictícios, URLs públicas e links para instalação?

@@ -1,11 +1,15 @@
 # Skill Release Orchestrator
 
-<p align="center">
-  <img src="assets/skill-release-orchestrator-banner.png" alt="Ilustração de um fluxo de criação de Skills com documentos, engrenagens, validação e publicação" width="100%">
-</p>
+<pre align="center">
++-------------------------------------------------------------+
+|  *  SKILL RELEASE ORCHESTRATOR                              |
+|     INTAKE -> DESIGN -> BUILD -> VALIDATE -> PUBLISH        |
+|     CODEX  -  CLAUDE CODE  -  GITHUB                        |
++-------------------------------------------------------------+
+</pre>
 
 <p align="center">
-  <a href="https://github.com/tiberiolemes/skill-release-orchestrator"><img src="https://img.shields.io/badge/version-1.0.0-7c3aed?style=for-the-badge" alt="Version 1.0.0"></a>
+  <a href="https://github.com/tiberiolemes/skill-release-orchestrator"><img src="https://img.shields.io/badge/version-1.0.1-7c3aed?style=for-the-badge" alt="Version 1.0.1"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-16a34a?style=for-the-badge" alt="MIT License"></a>
   <img src="https://img.shields.io/badge/Codex-supported-111827?style=for-the-badge" alt="Codex supported">
   <img src="https://img.shields.io/badge/Claude%20Code-supported-111827?style=for-the-badge" alt="Claude Code supported">
@@ -26,7 +30,7 @@ Ele conduz o intake, o desenho, a escrita, a identidade visual, a validação, o
 - metadados `agents/openai.yaml` para o Codex;
 - plugin e agente Claude Code quando essa plataforma fizer parte do escopo;
 - README bilíngue com instalação, uso, badges e limites;
-- banner e identidade visual quando aprovados;
+- banner ASCII e identidade visual quando aprovados;
 - licença, CONTRIBUTING, `.gitignore` e validador;
 - commit lógico, publicação e verificação pós-push quando autorizados.
 
@@ -64,9 +68,9 @@ Use $skill-release-orchestrator para transformar estas instruções em uma Skill
 
 Antes de editar, faça o intake obrigatório: pergunte se o repositório será público ou privado,
 qual licença devo usar, qual owner e nome do repositório, quais plataformas serão suportadas,
-quais idiomas e recursos visuais são necessários, quais dependências existem e se você está
+quais idiomas e se o banner deve ser ASCII, imagem ou nenhum, quais dependências existem e se você está
 autorizado a criar, commitar e publicar. Depois, siga o fluxo completo para Codex e Claude Code,
-com README bilíngue, badges, banner, licença, agentes, plugin, referências e validações.
+com README bilíngue, badges, banner ASCII, licença, agentes, plugin, referências e validações.
 Preserve alterações existentes, não exponha secrets e não declare o push concluído sem verificar.
 ```
 
@@ -78,7 +82,7 @@ A Skill não deve presumir:
 - licença ou direito de redistribuição;
 - owner, nome do repositório ou conta GitHub;
 - Codex, Claude Code ou ambas as plataformas;
-- idioma, README bilíngue, banner, badges ou identidade visual;
+- idioma, README bilíngue, banner ASCII/imagem, badges ou identidade visual;
 - invocação automática, dependências, MCPs ou permissões;
 - autorização para criar, commitar, fazer push ou publicar.
 
@@ -99,7 +103,6 @@ skill-release-orchestrator/
 ├── CONTRIBUTING.md
 ├── .claude-plugin/plugin.json
 ├── agents/skill-release-orchestrator-agent.md
-├── assets/skill-release-orchestrator-banner.png
 ├── scripts/validate_skills.py
 └── skills/skill-release-orchestrator/
     ├── SKILL.md
@@ -152,7 +155,7 @@ Invoke it with `$skill-release-orchestrator` in Codex or `@skill-release-orchest
 ```text
 Use $skill-release-orchestrator to turn these instructions into a distributable Skill.
 Ask first whether the repository is public or private, which license applies, the owner and
-repository name, supported platforms and languages, visual assets, dependencies, and whether
+repository name, supported platforms and languages, ASCII/image/no banner, dependencies, and whether
 you are authorized to create, commit, and push. Then build, validate, and safely publish the
 Codex and Claude Code package. Preserve existing work and never claim a push without proof.
 ```

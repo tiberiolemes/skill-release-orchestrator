@@ -40,7 +40,7 @@ LICENSE
 CONTRIBUTING.md
 .gitignore
 scripts/validate_skills.py
-assets/[banner]       # somente se aprovado no intake
+assets/[banner]       # somente se imagem/arte for explicitamente aprovada; ASCII fica no README
 ~~~
 
 Inclua somente arquivos que servem ao uso, à manutenção, à validação ou à identidade do pacote. Um repositório com várias Skills deve validar cada pasta e documentar como instalar uma Skill específica e o conjunto completo.

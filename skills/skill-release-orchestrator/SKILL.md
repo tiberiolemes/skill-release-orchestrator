@@ -1,6 +1,6 @@
 ---
 name: skill-release-orchestrator
-description: Orquestre a criação, validação, empacotamento e publicação segura de Skills compatíveis com Codex e Claude Code, com intake obrigatório, README bilíngue, licença, selos, banner, agentes e GitHub.
+description: Orquestre a criação, validação, empacotamento e publicação segura de Skills compatíveis com Codex e Claude Code, com intake obrigatório, README bilíngue, licença, selos, banner ASCII, agentes e GitHub.
 ---
 
 # Skill Release Orchestrator
@@ -19,7 +19,7 @@ Antes de criar arquivos, criar um repositório ou executar qualquer mutação ex
 4. Qual é o nome técnico, o nome exibido, o objetivo, o público e o limite da Skill?
 5. A Skill será distribuída para **Codex**, **Claude Code** ou ambos?
 6. Quais idiomas o README, a Skill e os exemplos devem suportar? O README precisa ser bilíngue?
-7. Quais recursos a entrega exige: referências, scripts, assets, badges, banner, agentes, plugin, exemplos, changelog ou CI?
+7. Quais recursos a entrega exige: referências, scripts, assets, badges, banner ASCII, banner em imagem, agentes, plugin, exemplos, changelog ou CI?
 8. A invocação deve ser automática, explícita ou ambas? Há dependências de ferramentas, MCPs ou permissões?
 9. O usuário autoriza criar/alterar o repositório, fazer commit e fazer push? Qual branch e mensagem de commit devem ser usadas?
 10. Existem templates, arquivos de referência, identidade visual, links, política de contribuição, contato ou restrições que precisam ser preservados?
@@ -38,7 +38,7 @@ skill-repository/
 ├── .gitignore
 ├── .claude-plugin/plugin.json         # distribuição Claude Code
 ├── agents/[skill-name]-agent.md       # agente Claude Code
-├── assets/[banner].png                # se banner for aprovado
+├── assets/[banner]                    # somente se imagem/arte for aprovada; ASCII fica no README
 ├── scripts/validate_skills.py
 └── skills/
     └── [skill-name]/
@@ -62,7 +62,7 @@ INTAKE → CHECKPOINT → DISCOVERY → DESIGN → BUILD → BRAND → VALIDATE 
 - **DISCOVERY** — Leia os artefatos fornecidos, inspecione Skills existentes, identifique padrões de `SKILL.md`, `openai.yaml`, agentes, plugin e validadores.
 - **DESIGN** — Defina nome técnico, descrição discriminante, modos de operação, limites, referências, saídas, políticas de invocação e dependências.
 - **BUILD** — Escreva `SKILL.md` enxuto, referências focadas, metadados Codex, agente Claude, plugin, README, licença, contribuição e validador.
-- **BRAND** — Gere ou integre banner somente se aprovado. Adicione badges coerentes com visibilidade, versão, licença e plataformas; nunca mostre credenciais ou dados privados.
+- **BRAND** — Use um banner ASCII no README por padrão quando houver identidade visual aprovada. Gere ou integre uma imagem somente se o intake pedir explicitamente esse formato. Adicione badges coerentes com visibilidade, versão, licença e plataformas; nunca mostre credenciais ou dados privados.
 - **VALIDATE** — Execute validador próprio, `quick_validate.py` quando disponível, parse de JSON/YAML, verificação de links/referências, diff check e varredura de secrets.
 - **REVIEW** — Revise manualmente clareza, limites, compatibilidade, instalação, perguntas de intake, licença, visibilidade e ausência de promessas não comprovadas.
 - **COMMIT** — Faça um commit lógico somente com os caminhos pretendidos. Não misture alterações existentes nem reescreva histórico compartilhado.
@@ -76,13 +76,13 @@ INTAKE → CHECKPOINT → DISCOVERY → DESIGN → BUILD → BRAND → VALIDATE 
 - O `SKILL.md` deve conter propósito, limites, fluxo, restrições e roteamento; procedimentos longos ficam em `references/`.
 - `agents/openai.yaml` deve ter strings entre aspas, prompt padrão curto e menção explícita a `$skill-name`. Mantenha invocação automática salvo decisão documentada.
 - O agente Claude deve ter frontmatter válido, referenciar a Skill correta, declarar ferramentas mínimas e respeitar os mesmos limites.
-- README e exemplos devem explicar instalação e uso no Codex e no Claude Code, além de dizer se a distribuição é pública ou privada.
+- README e exemplos devem explicar instalação e uso no Codex e no Claude Code, além de dizer se a distribuição é pública ou privada. Quando houver banner, prefira ASCII por ser portátil e não depender de arquivo binário.
 - Não inclua tokens, chaves, URLs internas, PII, dados de cliente, código privado ou valores reais de produção.
 - Use `NOT_VERIFIED` quando o comportamento, a permissão, o vínculo GitHub ou o status de publicação não puder ser comprovado.
 
 ## Publicação e GitHub
 
-Para um repositório novo, confirme a conta ativa com a CLI do GitHub antes de usar `gh repo create`. Para um repositório existente, leia o remote e faça fetch antes de integrar um commit inicial remoto. Se o repositório for privado, não publique instruções que pressuponham clone público nem use badges que prometam acesso aberto. Se o repositório for público, confirme que todo conteúdo, exemplo, banner e histórico são adequados para exposição pública.
+Para um repositório novo, confirme a conta ativa com a CLI do GitHub antes de usar `gh repo create`. Para um repositório existente, leia o remote e faça fetch antes de integrar um commit inicial remoto. Se o repositório for privado, não publique instruções que pressuponham clone público nem use badges que prometam acesso aberto. Se o repositório for público, confirme que todo conteúdo, exemplo, banner ASCII ou asset visual e histórico são adequados para exposição pública.
 
 Não use `git reset --hard`, `git clean -fd`, force push ou comandos destrutivos para “resolver” divergências. Se o push falhar por autenticação, owner incorreto, branch protegida, repositório inexistente ou histórico divergente, registre a causa e peça a ação necessária.
 

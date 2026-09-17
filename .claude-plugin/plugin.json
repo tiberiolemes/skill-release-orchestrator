@@ -1,0 +1,11 @@
+{
+  "name": "skill-release-orchestrator",
+  "description": "Create, package, validate, brand, and safely publish Codex and Claude Code Skills.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Tiberio Lemes"
+  },
+  "homepage": "https://github.com/tiberiolemes/skill-release-orchestrator",
+  "repository": "https://github.com/tiberiolemes/skill-release-orchestrator",
+  "license": "MIT"
+}

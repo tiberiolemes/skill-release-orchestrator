@@ -1,0 +1,8 @@
+interface:
+  display_name: "Skill Release Orchestrator"
+  short_description: "Create and publish Codex and Claude Skills"
+  brand_color: "#7C3AED"
+  default_prompt: "Use $skill-release-orchestrator to design, package, validate, and safely publish this Skill for Codex and Claude Code."
+
+policy:
+  allow_implicit_invocation: true
